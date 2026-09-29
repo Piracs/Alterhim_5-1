@@ -18,7 +18,7 @@ fullscreen = 0
 
 # The app writes Mark_fail.xlsx in its application-writable home directory.
 # These permissions also support the existing Android file chooser behavior.
-android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
+android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE,MANAGE_EXTERNAL_STORAGE
 
 # Android 12 is API 31. API 24 keeps the existing broad device compatibility.
 android.api = 31

@@ -5,16 +5,18 @@ from openpyxl import load_workbook, Workbook
 
 class ExcelManager:
     """Управляет записью штрихкодов в файлы Excel."""
-    
+
     def __init__(self, save_dir: str):
         self.save_dir = save_dir
-        self.base_file = os.path.join(save_dir, "Mark_fail.xlsx")
+        os.makedirs(self.save_dir, exist_ok=True)
+        self.base_file = os.path.join(self.save_dir, "Mark_fail.xlsx")
         self.column = "A"
 
     def update_save_dir(self, new_dir: str) -> None:
         """Обновляет целевую директорию сохранения файлов."""
         self.save_dir = new_dir
-        self.base_file = os.path.join(new_dir, "Mark_fail.xlsx")
+        os.makedirs(self.save_dir, exist_ok=True)
+        self.base_file = os.path.join(self.save_dir, "Mark_fail.xlsx")
 
     def init_workbook(self) -> Workbook:
         """Инициализирует или загружает временный файл."""

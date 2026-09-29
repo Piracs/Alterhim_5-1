@@ -6,13 +6,14 @@ from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.filechooser import FileChooserListView
+from config import DEFAULT_SAVE_DIR
 import os
 
 class MainScreen(Screen):
     """Главный экран сканирования товаров."""
     status_text = StringProperty("Ожидание сканов...")
     count_text = StringProperty("Успешно отсканировано: 0")
-    batch_text = StringProperty("Текущая партия: Не задана")
+    batch_text = StringProperty(DEFAULT_SAVE_DIR)
     save_path = StringProperty(os.path.expanduser("~"))
     count_color = StringProperty("00FF00")
 
