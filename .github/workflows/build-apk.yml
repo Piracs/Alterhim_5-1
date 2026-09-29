@@ -1,4 +1,4 @@
-name: Build CHE-ZE APK
+name: Build APK
 
 on:
   push:
