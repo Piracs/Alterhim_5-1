@@ -3,7 +3,7 @@ name: Build APK
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch: # <-- ДОБАВЬТЕ ЭТУ СТРОКУ СТРОГО С ТАКИМ ЖЕ ОТСТУПОМ (2 пробела)
+    workflow_dispatch: # <-- ДОБАВЬТЕ ЭТУ СТРОКУ СТРОГО С ТАКИМ ЖЕ ОТСТУПОМ (2 пробела)
 
 permissions:
   contents: read
