@@ -13,8 +13,8 @@ class MainScreen(Screen):
     """Главный экран сканирования товаров."""
     status_text = StringProperty("Ожидание сканов...")
     count_text = StringProperty("Успешно отсканировано: 0")
-    batch_text = StringProperty(DEFAULT_SAVE_DIR)
-    save_path = StringProperty(os.path.expanduser("~"))
+    batch_text = StringProperty("Текущая партия: Не задана")
+    save_path = StringProperty(DEFAULT_SAVE_DIR)
     count_color = StringProperty("00FF00")
 
     def choose_directory(self) -> None:
